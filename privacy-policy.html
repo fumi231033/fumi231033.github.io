@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="送料チェッカーのプライバシーポリシー">
+    <title>プライバシーポリシー | 送料チェッカー</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.75; }
+      body { margin: 0; background: #f4f7f6; color: #162521; }
+      main { width: min(860px, calc(100% - 32px)); margin: 32px auto; }
+      header, section, footer { background: #fff; border: 1px solid #dce5e2; border-radius: 16px; padding: 20px; margin-bottom: 14px; }
+      h1 { margin: 0 0 8px; font-size: clamp(1.6rem, 5vw, 2.2rem); }
+      h2 { margin: 0 0 10px; color: #075e52; font-size: 1.2rem; }
+      p { margin: 8px 0; }
+      .summary { padding: 14px; border-left: 5px solid #087f6b; background: #ddf3ed; border-radius: 10px; }
+      .updated { color: #65736f; font-size: .92rem; }
+      a { color: #075e52; font-weight: 700; overflow-wrap: anywhere; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #0f1b18; color: #eaf3f0; }
+        header, section, footer { background: #172824; border-color: #34514a; }
+        h2, a { color: #7de1cb; }
+        .summary { color: #eaf3f0; background: #174c42; }
+        .updated { color: #b7c8c3; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>プライバシーポリシー</h1>
+        <p class="updated">対象アプリ：送料チェッカー／最終更新日：2026-09-08</p>
+        <p class="summary">送料チェッカーは、送料判定、カメラ寸法測定、発送管理、売上集計を可能な限り端末内で処理します。運営者が利用者の発送記録やカメラ映像を収集する外部サーバーは使用していません。</p>
+      </header>
+
+      <section id="data_handling">
+        <h2>1. 取得・収集・共有する情報</h2>
+        <p>本アプリにはアカウント登録機能がなく、氏名、住所、メールアドレス、電話番号、位置情報、連絡先、広告IDを運営者のサーバーへ収集または共有する機能はありません。</p>
+        <p>梱包サイズ、重量、発送条件は送料判定のため端末内で処理します。送料判定条件は発送記録として保存する操作を行わない限り、アプリ終了後に利用する目的では保存しません。</p>
+      </section>
+
+      <section id="camera">
+        <h2>2. カメラとAR測定</h2>
+        <p>カメラ権限は、梱包物の寸法を手動補正またはARで測定する場合だけ求めます。カメラ映像、指定した測定点、採寸値は端末内で処理し、運営者のサーバーへ送信しません。</p>
+        <p>本アプリはカメラ映像を写真として保存する機能と音声を録音する機能を備えていません。カメラ権限を許可しない場合も、寸法を手入力して送料判定を利用できます。</p>
+      </section>
+
+      <section id="shipping_records">
+        <h2>3. 発送記録と売上情報</h2>
+        <p>利用者が登録した商品名、販売先、販売価格、送料、各種経費、発送方法、発送状況、発送期限、任意メモは、端末のアプリ専用SQLiteデータベースへ保存します。これらの情報を運営者が受信する機能はありません。</p>
+        <p>商品名やメモへ個人情報を入力する必要はありません。追跡コードなどを入力する場合は、端末の画面ロックなど利用端末の安全管理も行ってください。</p>
+      </section>
+
+      <section id="files">
+        <h2>4. CSV・バックアップ・ファイル選択</h2>
+        <p>CSVまたはJSONバックアップを保存する操作では、端末内の一時ファイルを作成し、Androidの共有先選択画面を開きます。共有先を選んだ後のデータ取扱いは、利用者が選択したアプリまたはサービスのポリシーに従います。</p>
+        <p>バックアップから復元する操作では、Androidの文書選択画面で利用者が選んだファイルだけを読み取ります。読込み用の一時コピーは処理後に削除し、共有用一時ファイルは次に売上・利益画面を開いたときに削除します。</p>
+      </section>
+
+      <section id="external_services">
+        <h2>5. 外部サイトと通信</h2>
+        <p>公式ページ、発送手順、配送会社の追跡ページ、楽天市場検索を利用者が押した場合だけ、HTTPSの外部アプリまたはブラウザを開きます。外部サイトでの情報取扱いは各サイトのポリシーに従います。</p>
+        <p>初回公開版の楽天市場検索URLへ含める情報は、配送サービス名などから端末内で生成した梱包資材の検索キーワードだけです。梱包寸法、重量、発送記録、メモ、カメラ映像はURLへ含めません。現在は広告SDK、解析SDK、アフィリエイト計測を組み込んでいません。</p>
+      </section>
+
+      <section id="retention_deletion">
+        <h2>6. 保存期間と削除方法</h2>
+        <p>発送記録は、利用者が個別削除または全記録削除を行うまで端末内に保持します。発送記録はAndroidの自動バックアップ対象外で、アプリをアンインストールするとアプリ専用領域の記録も削除されます。</p>
+        <p>本アプリには利用者アカウントと運営者側の利用者データ保管先がないため、アカウント削除申請はありません。必要な記録をCSVまたはJSONで保存した後、アプリ内の全記録削除を利用できます。</p>
+      </section>
+
+      <section id="security">
+        <h2>7. 安全管理</h2>
+        <p>発送記録はAndroidのアプリ専用領域へ保存し、他のアプリから直接読み取れないOSの保護を利用します。Android自動バックアップは無効にし、外部ページはHTTPS URLだけを開きます。</p>
+        <p>端末の紛失、第三者による端末操作、利用者が選んだ共有先での取扱いについては、本アプリだけで完全に防止できません。端末の画面ロックと共有先の確認を行ってください。</p>
+      </section>
+
+      <section id="changes">
+        <h2>8. ポリシーの変更</h2>
+        <p>広告、解析、アフィリエイト計測、外部サーバー同期など、データ取扱いが変わる機能を追加する場合は、本ポリシーとGoogle Playのデータセーフティ表示を更新し、必要に応じてアプリ内で案内します。</p>
+      </section>
+
+      <section id="contact">
+        <h2>9. お問い合わせ</h2>
+        <p>本アプリとプライバシーに関するお問い合わせ方法は、下記のお問い合わせ案内から確認できます。GitHub Issuesへ投稿した内容は公開されるため、氏名、住所、追跡コードなどの個人情報や秘密情報を記載しないでください。</p>
+      </section>
+      <footer>
+        <p><a href="https://fumi231033.github.io/support.html" rel="noopener noreferrer">お問い合わせ案内</a></p>
+        <p>このページは、アプリに同梱したポリシーデータから生成しています。</p>
+      </footer>
+    </main>
+  </body>
+</html>

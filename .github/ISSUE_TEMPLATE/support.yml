@@ -1,0 +1,43 @@
+name: 送料チェッカーへのお問い合わせ
+description: 使い方、不具合、プライバシーに関するお問い合わせ
+title: "[お問い合わせ] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        お問い合わせありがとうございます。投稿内容は公開されます。個人情報や秘密情報は記載しないでください。
+  - type: dropdown
+    id: category
+    attributes:
+      label: お問い合わせの種類
+      options:
+        - アプリの使い方
+        - 不具合
+        - プライバシー
+        - その他
+    validations:
+      required: true
+  - type: input
+    id: app_version
+    attributes:
+      label: アプリのバージョン
+      placeholder: 例：0.1.1
+  - type: input
+    id: android_version
+    attributes:
+      label: Androidのバージョン
+      placeholder: 例：Android 14
+  - type: textarea
+    id: details
+    attributes:
+      label: 内容
+      description: 個人情報を除き、操作手順や表示されたメッセージを記載してください。
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy_confirmation
+    attributes:
+      label: 公開内容の確認
+      options:
+        - label: 氏名、住所、電話番号、メールアドレス、追跡コードなどの個人情報・秘密情報を記載していません。
+          required: true
